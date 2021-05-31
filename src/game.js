@@ -22,6 +22,11 @@ class Game{
         }
         return false
     }
+    heal(){
+        return this.players[0].heal()
+        
+    }
+
 
     swap(){
         this.players.reverse()

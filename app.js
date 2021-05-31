@@ -27,8 +27,14 @@ app.use('/', conf)
 const sleep=require('./controllers/sleep.js')
 app.use('/', sleep)
 
+const heal=require('./controllers/heal.js')
+app.use('/', heal)
+
 const again=require('./controllers/playAgain.js')
 app.use('/', again)
+
+const poison=require('./controllers/poison.js')
+app.use('/', poison)
 
 
 app.listen(port, () => {

@@ -4,6 +4,7 @@ class Player {
         this.hp = hp
         this.isDead=false
         this.isAsleep=false
+        this.isPoisoned=false
     }
     takeHit(amount){
         this.hp-=amount
@@ -11,6 +12,11 @@ class Player {
             this.isDead=true
         }
         return this.hp
+    }
+    heal(max=3){
+        let amount = Math.floor((Math.random() * max))
+        this.hp+=amount
+        return amount
     }
 }
 
