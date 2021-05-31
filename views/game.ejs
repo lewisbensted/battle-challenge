@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 id='player1'>Player 1: <%=game.playerOrder[0].name%> Points: <%=game.playerOrder[0].hp%></h3>
+<h3 id='player2'> Player 2: <%=game.playerOrder[1].name%> Points: <%=game.playerOrder[1].hp%> </h3>
+<h2 id='message'><%=message%></h2>
+
+<% if (game.playing) {%>
+<form action='/attack' method='post'>
+    <input type='submit' id='attack' name='attack' value='Attack'>
+</form>
+<form action='/attack' method='post'>
+    <input type='submit' id='attack' name='attack' value='Paralyze'>
+</form>
+<form action='/sleep' method='post'>
+    <input type='submit' id='sleep' name='sleep' value='Sleep'>
+</form>
+<form action='/attack' method='post'>
+    <input type='submit' id='attack' name='attack' value='Poison'>
+</form>
+<% } else {%>
+<form action='/playAgain' method='post'>
+<input type='submit' id='playAgain' name='playAgain' value='Play Again'>
+</form>
+<% }%>
+
+
+
+</body>
+<script src="../app.js"></script>
+</html>
